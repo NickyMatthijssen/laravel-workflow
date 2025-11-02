@@ -1,0 +1,48 @@
+{
+    "name": "nickymatthijssen/laravel-workflow",
+    "description": "Symfony workflow component for integration for Laravel",
+    "keywords": [
+        "php",
+        "laravel",
+        "workflow",
+        "symfony"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nicky Matthijssen",
+            "email": "nicky@shinobizero.dev"
+        }
+    ],
+    "require": {
+        "php": "^8.3",
+        "symfony/workflow": "^7.3"
+    },
+    "require-dev": {
+        "laravel/pint": "^1.25",
+        "orchestra/testbench": "v10.6",
+        "pestphp/pest": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "NickyMatthijssen\\LaravelWorkflow\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "NickyMatthijssen\\LaravelWorkflow\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NickyMatthijssen\\LaravelWorkflow\\WorkflowServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    }
+}

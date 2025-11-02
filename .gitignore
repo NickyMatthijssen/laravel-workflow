@@ -1,0 +1,9 @@
+/.phpunit.cache
+/vendor
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.vscode
+/.zed
