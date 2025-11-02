@@ -7,3 +7,4 @@
 /.nova
 /.vscode
 /.zed
+composer.lock

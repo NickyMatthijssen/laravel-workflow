@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace NickyMatthijssen\LaravelWorkflow\Tests\Feature\Facade;
 
-use InvalidArgumentException;
 use NickyMatthijssen\LaravelWorkflow\Facade\WorkflowFacade;
 use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
 use Symfony\Component\Workflow\WorkflowInterface;
