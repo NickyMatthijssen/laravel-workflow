@@ -7,11 +7,14 @@ namespace NickyMatthijssen\LaravelWorkflow;
 use Illuminate\Support\ServiceProvider;
 use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactory;
 use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
+use NickyMatthijssen\LaravelWorkflow\Service\ConfigurationWorkflowResolver;
+use NickyMatthijssen\LaravelWorkflow\Service\WorkflowResolverInterface;
 
 final class WorkflowServiceProvider extends ServiceProvider
 {
     public array $bindings = [
         RegisteredWorkflowFactoryInterface::class => RegisteredWorkflowFactory::class,
+        WorkflowResolverInterface::class => ConfigurationWorkflowResolver::class,
     ];
 
     public array $singletons = [

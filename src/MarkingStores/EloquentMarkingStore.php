@@ -23,8 +23,8 @@ final readonly class EloquentMarkingStore implements MarkingStoreInterface
         }
 
         $marking = $subject->{$this->property};
-        if ($marking === null) {
-            return new Marking;
+        if (null === $marking) {
+            return new Marking();
         }
 
         if ($this->singleState) {

@@ -24,31 +24,31 @@ return [
      * The configurations should be in the same format as the 'workflows' key in this file.
      */
     'workflow_paths' => [
-//        base_path('config/workflows.php'),
+        //        base_path('config/workflows.php'),
     ],
 
     /**
      * Workflow definitions.
      */
     'workflows' => [
-//        'test' => [
-//            'type' => Type::StateMachine,
-//            'supports' => [stdClass::class],
-//            'initial_marking' => 'draft',
-//            'places' => [
-//                'concept',
-//                'planned',
-//                'cancelled',
-//                'finished',
-//            ],
-//            'transitions' => [
-//                'to_planned' => ['from' => 'concept', 'to' => 'planned'],
-//                'to_cancelled_from_concept' => ['from' => 'concept', 'to' => 'cancelled'],
-//                'to_cancelled_from_planned' => ['from' => 'planned', 'to' => 'cancelled'],
-//                'to_finished' => ['from' => 'planned', 'to' => 'finished'],
-//            ],
-//            'marking_store' => \Symfony\Component\Workflow\MarkingStore\MethodMarkingStore::class,
-//            'property' => 'status',
-//        ],
+        //        'test' => [
+        //            'type' => Type::StateMachine,
+        //            'supports' => [stdClass::class],
+        //            'initial_marking' => 'draft',
+        //            'places' => [
+        //                'concept',
+        //                'planned',
+        //                'cancelled',
+        //                'finished',
+        //            ],
+        //            'transitions' => [
+        //                'to_planned' => ['from' => 'concept', 'to' => 'planned'],
+        //                'to_cancelled_from_concept' => ['from' => 'concept', 'to' => 'cancelled'],
+        //                'to_cancelled_from_planned' => ['from' => 'planned', 'to' => 'cancelled'],
+        //                'to_finished' => ['from' => 'planned', 'to' => 'finished'],
+        //            ],
+        //            'marking_store' => \Symfony\Component\Workflow\MarkingStore\MethodMarkingStore::class,
+        //            'property' => 'status',
+        //        ],
     ],
 ];

@@ -1,0 +1,26 @@
+{
+    "preset": "laravel",
+    "rules": {
+        "simplified_null_return": true,
+        "array_indentation": true,
+        "new_with_parentheses": {
+            "anonymous_class": true,
+            "named_class": true
+        },
+        "declare_strict_types": true,
+        "strict_comparison": true,
+        "no_trailing_comma_in_singleline": true,
+        "trim_array_spaces": true,
+        "trailing_comma_in_multiline": true,
+        "align_multiline_comment": true,
+        "attribute_empty_parentheses": true,
+        "blank_lines_before_namespace": true,
+        "blank_line_after_namespace": true,
+        "blank_line_after_opening_tag": true,
+        "blank_line_between_import_groups": true,
+        "braces": true,
+        "braces_position": true,
+        "yoda_style": true,
+        "phpdoc_align": false
+    }
+}

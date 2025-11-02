@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 use NickyMatthijssen\LaravelWorkflow\Enums\Type;
 use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
 use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;

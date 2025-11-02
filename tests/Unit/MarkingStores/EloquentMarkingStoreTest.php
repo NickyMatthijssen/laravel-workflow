@@ -32,10 +32,9 @@ it('can set status through magic setter', function (bool $singleState, string|ar
 ]);
 
 test('getMarking throws exception when subject is not an Eloquent model', function () {
-    (new EloquentMarkingStore(true, 'status'))->setMarking(new stdClass, new Marking([]));
-
+    (new EloquentMarkingStore(true, 'status'))->setMarking(new stdClass(), new Marking([]));
 })->throws(InvalidSubjectException::class, 'The subject must be an Eloquent model, "stdClass" given');
 
 test('setMarking throws exception when subject is not an Eloquent model', function () {
-    (new EloquentMarkingStore(true, 'status'))->setMarking(new stdClass, new Marking([]));
+    (new EloquentMarkingStore(true, 'status'))->setMarking(new stdClass(), new Marking([]));
 })->throws(InvalidSubjectException::class, 'The subject must be an Eloquent model, "stdClass" given');

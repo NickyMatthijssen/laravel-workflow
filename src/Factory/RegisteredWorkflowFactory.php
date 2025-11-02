@@ -40,9 +40,9 @@ final readonly class RegisteredWorkflowFactory implements RegisteredWorkflowFact
             $type,
             $data['initial_place'] ?? throw UnexpectedValueException::unexpectedMissingValue('initial_place'),
             $data['supports'] ?? throw UnexpectedValueException::unexpectedMissingValue('supports'),
-            $places !== null ? $this->getPlaces($places) : [],
-            $transitions !== null ? $this->getTransitions($transitions) : [],
-            $this->createMarkingStore($markingStoreClass, $data['property'] ?? $this->defaultProperty),
+            null !== $places ? $this->getPlaces($places) : [],
+            null !== $transitions ? $this->getTransitions($transitions) : [],
+            $this->createMarkingStore($markingStoreClass, $type, $data['property'] ?? $this->defaultProperty),
         );
     }
 
@@ -69,11 +69,13 @@ final readonly class RegisteredWorkflowFactory implements RegisteredWorkflowFact
     /**
      * @param  class-string<MarkingStoreInterface>  $markingStoreClass
      */
-    private function createMarkingStore(string $markingStoreClass, ?string $property = null): MarkingStoreInterface
+    private function createMarkingStore(string $markingStoreClass, Type $type, ?string $property = null): MarkingStoreInterface
     {
+        $isSingleState = Type::StateMachine === $type;
+
         return match ($markingStoreClass) {
-            MethodMarkingStore::class => new MethodMarkingStore(true, $property),
-            EloquentMarkingStore::class => new EloquentMarkingStore(true, $property),
+            MethodMarkingStore::class => new MethodMarkingStore($isSingleState, $property),
+            EloquentMarkingStore::class => new EloquentMarkingStore($isSingleState, $property),
         };
     }
 }
