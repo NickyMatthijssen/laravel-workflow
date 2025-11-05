@@ -50,7 +50,9 @@ final readonly class RegisteredWorkflow implements RegisteredWorkflowInterface
 
     public function toWorkflow(): WorkflowInterface
     {
-        $definition = (new DefinitionBuilder($this->places, $this->transitions))->setInitialPlaces($this->initialPlace)->build();
+        $definition = (new DefinitionBuilder($this->places, $this->transitions))
+            ->setInitialPlaces($this->initialPlace)
+            ->build();
 
         // TODO: Pass dispatcher so it's possible to dispatch events and listen to them with Laravel event listeners.
         return match ($this->type) {

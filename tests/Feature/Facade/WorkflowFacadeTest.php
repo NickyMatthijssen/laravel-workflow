@@ -5,11 +5,37 @@ declare(strict_types=1);
 namespace NickyMatthijssen\LaravelWorkflow\Tests\Feature\Facade;
 
 use InvalidArgumentException;
+use NickyMatthijssen\LaravelWorkflow\Enums\Type;
 use NickyMatthijssen\LaravelWorkflow\Facade\WorkflowFacade;
+use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
 use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
 use Symfony\Component\Workflow\Exception\NotEnabledTransitionException;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;
+
+beforeEach(function () {
+    $this->app->make('config')->set('workflow.workflows', [
+        'test' => [
+            'type' => Type::StateMachine,
+            'supports' => [TestModel::class],
+            'initial_place' => 'concept',
+            'places' => [
+                'concept',
+                'planned',
+                'cancelled',
+                'finished',
+            ],
+            'transitions' => [
+                'to_planned' => ['from' => 'concept', 'to' => 'planned'],
+                'to_cancelled_from_concept' => ['from' => 'concept', 'to' => 'cancelled'],
+                'to_cancelled_from_planned' => ['from' => 'planned', 'to' => 'cancelled'],
+                'to_finished' => ['from' => 'planned', 'to' => 'finished'],
+            ],
+            'marking_store' => EloquentMarkingStore::class,
+            'property' => 'status',
+        ],
+    ]);
+});
 
 it('retrieves the workflow if it exists', function () {
     expect(WorkflowFacade::get(new TestModel()))->toBeInstanceOf(WorkflowInterface::class);

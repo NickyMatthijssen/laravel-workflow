@@ -2,28 +2,22 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow;
+namespace NickyMatthijssen\LaravelWorkflow\Service;
 
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowResolverInterface;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\Registry;
 use Symfony\Component\Workflow\SupportStrategy\InstanceOfSupportStrategy;
 use Symfony\Component\Workflow\WorkflowInterface;
 
-readonly class WorkflowManager implements WorkflowManagerInterface
+final readonly class WorkflowManager implements WorkflowManagerInterface
 {
-    private Registry $registry;
+    private array $registeredWorkflows;
 
-    public function __construct(
-        private RegisteredWorkflowFactoryInterface $registeredWorkflowFactory,
-        private WorkflowResolverInterface $workflowResolver,
-    ) {
-        $this->registry = new Registry();
+    public function __construct(private Registry $registry, WorkflowLoaderInterface $workflowLoader)
+    {
+        $this->registeredWorkflows = $workflowLoader->load();
 
-        foreach ($this->workflowResolver->resolve() as $name => $workflowConfiguration) {
-            $registeredWorkflow = $this->registeredWorkflowFactory->fromWorkflowConfiguration($name, $workflowConfiguration);
-
+        foreach ($this->registeredWorkflows as $registeredWorkflow) {
             foreach ($registeredWorkflow->getSupports() as $class) {
                 $this->registry->addWorkflow($registeredWorkflow->toWorkflow(), new InstanceOfSupportStrategy($class));
             }
@@ -43,5 +37,10 @@ readonly class WorkflowManager implements WorkflowManagerInterface
     public function apply(object $subject, string $transitionName, ?string $workflowName = null): Marking
     {
         return $this->registry->get($subject, $workflowName)->apply($subject, $transitionName);
+    }
+
+    public function getRegisteredWorkflows(): array
+    {
+        return $this->registeredWorkflows;
     }
 }

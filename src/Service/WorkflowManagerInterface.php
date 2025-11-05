@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow;
+namespace NickyMatthijssen\LaravelWorkflow\Service;
 
+use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;
 
@@ -14,4 +15,9 @@ interface WorkflowManagerInterface
     public function can(object $subject, string $transitionName, ?string $workflowName = null): bool;
 
     public function apply(object $subject, string $transitionName, ?string $workflowName = null): Marking;
+
+    /**
+     * @return list<RegisteredWorkflow>
+     */
+    public function getRegisteredWorkflows(): array;
 }
