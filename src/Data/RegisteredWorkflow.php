@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Data;
+namespace ShinobiZero\LaravelWorkflow\Data;
 
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
 use Symfony\Component\Workflow\DefinitionBuilder;
 use Symfony\Component\Workflow\MarkingStore\MarkingStoreInterface;
 use Symfony\Component\Workflow\StateMachine;

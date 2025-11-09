@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Enums;
+namespace ShinobiZero\LaravelWorkflow\Enums;
 
 enum Type: string
 {

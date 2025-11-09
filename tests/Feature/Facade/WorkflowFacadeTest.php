@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Feature\Facade;
+namespace ShinobiZero\LaravelWorkflow\Tests\Feature\Facade;
 
 use InvalidArgumentException;
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
-use NickyMatthijssen\LaravelWorkflow\Facade\WorkflowFacade;
-use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
-use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Facade\WorkflowFacade;
+use ShinobiZero\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
+use ShinobiZero\LaravelWorkflow\Tests\Mock\TestModel;
 use Symfony\Component\Workflow\Exception\NotEnabledTransitionException;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Facade;
+namespace ShinobiZero\LaravelWorkflow\Facade;
 
 use Illuminate\Support\Facades\Facade;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowManagerInterface;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowManagerInterface;
 
 final class WorkflowFacade extends Facade
 {

@@ -1,5 +1,5 @@
 {
-    "name": "nickymatthijssen/laravel-workflow",
+    "name": "shinobi-zero/laravel-workflow",
     "description": "Symfony workflow component for integration for Laravel",
     "keywords": [
         "php",
@@ -25,18 +25,18 @@
     },
     "autoload": {
         "psr-4": {
-            "NickyMatthijssen\\LaravelWorkflow\\": "src/"
+            "ShinobiZero\\LaravelWorkflow\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "NickyMatthijssen\\LaravelWorkflow\\Tests\\": "tests/"
+            "ShinobiZero\\LaravelWorkflow\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NickyMatthijssen\\LaravelWorkflow\\WorkflowServiceProvider"
+                "ShinobiZero\\LaravelWorkflow\\WorkflowServiceProvider"
             ]
         }
     },
@@ -44,5 +44,9 @@
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+    },
+    "scripts": {
+        "test": "pest",
+        "test:coverage": "XDEBUG_MODE=coverage pest --coverage"
     }
 }

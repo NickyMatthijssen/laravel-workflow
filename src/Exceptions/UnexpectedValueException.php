@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Exceptions;
+namespace ShinobiZero\LaravelWorkflow\Exceptions;
 
 use UnexpectedValueException as SplUnexpectedValueException;
 

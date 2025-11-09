@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Unit\Service;
+namespace ShinobiZero\LaravelWorkflow\Tests\Unit\Service;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
-use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
-use NickyMatthijssen\LaravelWorkflow\Service\ConfigurationWorkflowLoader;
-use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflow;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
+use ShinobiZero\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
+use ShinobiZero\LaravelWorkflow\Service\ConfigurationWorkflowLoader;
+use ShinobiZero\LaravelWorkflow\Tests\Mock\TestModel;
 use stdClass;
 use Symfony\Component\Workflow\MarkingStore\MethodMarkingStore;
 use Symfony\Component\Workflow\Transition;

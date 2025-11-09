@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Factory;
+namespace ShinobiZero\LaravelWorkflow\Factory;
 
 use BackedEnum;
 use Illuminate\Container\Attributes\Config;
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflowInterface;
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
-use NickyMatthijssen\LaravelWorkflow\Exceptions\UnexpectedValueException;
-use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflow;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflowInterface;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Exceptions\UnexpectedValueException;
+use ShinobiZero\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
 use Symfony\Component\Workflow\MarkingStore\MarkingStoreInterface;
 use Symfony\Component\Workflow\MarkingStore\MethodMarkingStore;
 use Symfony\Component\Workflow\Transition;

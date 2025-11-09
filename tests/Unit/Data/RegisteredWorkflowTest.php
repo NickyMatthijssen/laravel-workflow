@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Unit\Data;
+namespace ShinobiZero\LaravelWorkflow\Tests\Unit\Data;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflow;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
 use stdClass;
 use Symfony\Component\Workflow\MarkingStore\MethodMarkingStore;
 use Symfony\Component\Workflow\Transition;

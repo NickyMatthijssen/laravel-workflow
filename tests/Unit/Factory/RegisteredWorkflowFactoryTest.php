@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Unit\Factory;
+namespace ShinobiZero\LaravelWorkflow\Tests\Unit\Factory;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
-use NickyMatthijssen\LaravelWorkflow\Enums\Type;
-use NickyMatthijssen\LaravelWorkflow\Exceptions\UnexpectedValueException;
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactory;
-use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflow;
+use ShinobiZero\LaravelWorkflow\Enums\Type;
+use ShinobiZero\LaravelWorkflow\Exceptions\UnexpectedValueException;
+use ShinobiZero\LaravelWorkflow\Factory\RegisteredWorkflowFactory;
+use ShinobiZero\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
 use stdClass;
 use Symfony\Component\Workflow\MarkingStore\MethodMarkingStore;
 use Symfony\Component\Workflow\Transition;

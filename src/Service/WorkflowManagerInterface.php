@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Service;
+namespace ShinobiZero\LaravelWorkflow\Service;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflow;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflow;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;
 

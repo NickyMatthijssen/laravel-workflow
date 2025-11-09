@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Unit\MarkingStores;
+namespace ShinobiZero\LaravelWorkflow\Tests\Unit\MarkingStores;
 
-use NickyMatthijssen\LaravelWorkflow\Exceptions\InvalidSubjectException;
-use NickyMatthijssen\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
-use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
+use ShinobiZero\LaravelWorkflow\Exceptions\InvalidSubjectException;
+use ShinobiZero\LaravelWorkflow\MarkingStores\EloquentMarkingStore;
+use ShinobiZero\LaravelWorkflow\Tests\Mock\TestModel;
 use stdClass;
 use Symfony\Component\Workflow\Marking;
 

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests;
+namespace ShinobiZero\LaravelWorkflow\Tests;
 
-use NickyMatthijssen\LaravelWorkflow\WorkflowServiceProvider;
 use Orchestra\Testbench\Concerns\WithWorkbench;
 use Orchestra\Testbench\TestCase as BaseTestCase;
+use ShinobiZero\LaravelWorkflow\WorkflowServiceProvider;
 
 abstract class TestCase extends BaseTestCase
 {

@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Feature\Concerns;
+namespace ShinobiZero\LaravelWorkflow\Tests\Feature\Concerns;
 
-use NickyMatthijssen\LaravelWorkflow\Facade\WorkflowFacade;
-use NickyMatthijssen\LaravelWorkflow\Tests\Mock\TestModel;
+use ShinobiZero\LaravelWorkflow\Facade\WorkflowFacade;
+use ShinobiZero\LaravelWorkflow\Tests\Mock\TestModel;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;
 

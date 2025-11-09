@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Service;
+namespace ShinobiZero\LaravelWorkflow\Service;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflowInterface;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflowInterface;
 
 interface WorkflowLoaderInterface
 {
