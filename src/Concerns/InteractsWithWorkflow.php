@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Concerns;
+namespace ShinobiZero\LaravelWorkflow\Concerns;
 
-use NickyMatthijssen\LaravelWorkflow\Facade\WorkflowFacade;
+use ShinobiZero\LaravelWorkflow\Facade\WorkflowFacade;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\WorkflowInterface;
 

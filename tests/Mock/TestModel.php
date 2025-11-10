@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Mock;
+namespace ShinobiZero\LaravelWorkflow\Tests\Mock;
 
 use Illuminate\Database\Eloquent\Model;
-use NickyMatthijssen\LaravelWorkflow\Concerns\InteractsWithWorkflow;
+use ShinobiZero\LaravelWorkflow\Concerns\InteractsWithWorkflow;
 
 class TestModel extends Model
 {

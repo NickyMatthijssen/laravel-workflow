@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Factory;
+namespace ShinobiZero\LaravelWorkflow\Factory;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflowInterface;
-use NickyMatthijssen\LaravelWorkflow\Exceptions\UnexpectedValueException;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflowInterface;
+use ShinobiZero\LaravelWorkflow\Exceptions\UnexpectedValueException;
 
 interface RegisteredWorkflowFactoryInterface
 {

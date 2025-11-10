@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Tests\Unit\Service;
+namespace ShinobiZero\LaravelWorkflow\Tests\Unit\Service;
 
-use NickyMatthijssen\LaravelWorkflow\Data\RegisteredWorkflowInterface;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowLoaderInterface;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowManager;
+use ShinobiZero\LaravelWorkflow\Data\RegisteredWorkflowInterface;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowLoaderInterface;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowManager;
 use stdClass;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\Registry;

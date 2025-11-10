@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\MarkingStores;
+namespace ShinobiZero\LaravelWorkflow\MarkingStores;
 
 use Illuminate\Database\Eloquent\Model;
-use NickyMatthijssen\LaravelWorkflow\Exceptions\InvalidSubjectException;
+use ShinobiZero\LaravelWorkflow\Exceptions\InvalidSubjectException;
 use Symfony\Component\Workflow\Marking;
 use Symfony\Component\Workflow\MarkingStore\MarkingStoreInterface;
 

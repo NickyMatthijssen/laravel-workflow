@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow\Service;
+namespace ShinobiZero\LaravelWorkflow\Service;
 
 use Illuminate\Container\Attributes\Config;
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
+use ShinobiZero\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
 
 final readonly class ConfigurationWorkflowLoader implements WorkflowLoaderInterface
 {

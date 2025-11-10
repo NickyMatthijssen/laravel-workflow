@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace NickyMatthijssen\LaravelWorkflow;
+namespace ShinobiZero\LaravelWorkflow;
 
 use Illuminate\Support\ServiceProvider;
-use NickyMatthijssen\LaravelWorkflow\Exceptions\WorkflowConfigurationNotFound;
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactory;
-use NickyMatthijssen\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
-use NickyMatthijssen\LaravelWorkflow\Service\ConfigurationWorkflowLoader;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowLoaderInterface;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowManager;
-use NickyMatthijssen\LaravelWorkflow\Service\WorkflowManagerInterface;
+use ShinobiZero\LaravelWorkflow\Exceptions\WorkflowConfigurationNotFound;
+use ShinobiZero\LaravelWorkflow\Factory\RegisteredWorkflowFactory;
+use ShinobiZero\LaravelWorkflow\Factory\RegisteredWorkflowFactoryInterface;
+use ShinobiZero\LaravelWorkflow\Service\ConfigurationWorkflowLoader;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowLoaderInterface;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowManager;
+use ShinobiZero\LaravelWorkflow\Service\WorkflowManagerInterface;
 use Symfony\Component\Workflow\Registry;
 
 final class WorkflowServiceProvider extends ServiceProvider
@@ -44,6 +44,6 @@ final class WorkflowServiceProvider extends ServiceProvider
     {
         $this->publishes([
             sprintf('%s/../config/workflow.php', __DIR__) => config_path('workflow.php'),
-        ], 'workflow-config');
+        ], 'laravel-workflow-config');
     }
 }
